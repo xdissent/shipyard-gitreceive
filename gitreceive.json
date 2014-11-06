@@ -1,0 +1,26 @@
+{
+  "name": "gitreceive",
+  "image": "xdissent/shipyard-gitreceive",
+  "version": "0.1",
+  "author": "xdissent",
+  "description": "receive git pushes in shipyard",
+  "url": "https://github.com/xdissent/shipyard-gitreceive",
+  "config": {
+    "prompt_env": [
+      "SHIPYARD_URL",
+      "SHIPYARD_SERVICE_KEY",
+      "SSH_PUBLIC_KEY",
+      "SSL_PRIVATE_KEYS"
+    ],
+    "cpus": 0.1,
+    "memory": 32,
+    "ports": [
+      {
+        "proto": "tcp",
+        "port": 3333,
+        "container_port": 22
+      }
+     ],
+    "deploy_per_engine": false
+  }
+}
